@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        #result {
+            border: 2px solid red;
+            padding: 30px;
+            color: orange;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pytanie jak oceniasz swoją wiedzę?</h1>
+    <input type="number" id="menstruacja" min="0" max="100" placeholder="Podaj procentowo">
+    <button onclick="sorSalach_i_pawel()">Sprawdź wiedze</button>
+    <div id="result"></div>
+
+    <script>
+        function sorSalach_i_pawel() {
+            var menstruacja = document.getElementById('menstruacja').value;
+            var result = document.getElementById('result');
+            if (menstruacja == 100) {
+                result.innerHTML = "<h1>Twoja ocena to: 6 jestes niesamowity</h1>";
+            } else if (menstruacja >= 90) {
+                result.innerHTML = "<h1>Ocena: Twoja ocena to: 5 jestes niesamowity</h1>";
+            } else if (menstruacja >= 75) {
+                result.innerHTML = "<h1>Ocena: Twoja ocena to: 4 jestes niesamowity</h1>";
+            } else if (menstruacja >= 50) {
+                result.innerHTML = "<h1>Ocena: Twoja ocena to: 3 jestes niesamowity</h1>";
+            } else if (menstruacja >= 30) {
+                result.innerHTML = "<h1>Ocena: Twoja ocena to: 2 jestes niesamowity</h1>";
+            } else {
+                result.innerHTML = "<h1>Ocena: Twoja ocena to: 1 jestes niesamowicie glupi</h1>";
+            }
+        }
+    </script>
+</body>
+</html>
